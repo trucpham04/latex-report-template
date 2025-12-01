@@ -1,0 +1,61 @@
+\documentclass[a4paper,twoside]{report}
+
+% Import cấu hình
+\input{config/packages}
+\input{config/settings}
+\input{config/info}
+
+\begin{document}
+
+% ===== TRANG BÌA =====
+\input{config/titlepage}
+
+% ===== MỤC LỤC =====
+\tableofcontents
+\newpage
+
+% Danh sách hình
+\listoffigures
+\newpage
+
+% Danh sách bảng
+\listoftables
+\newpage
+
+% ===== NỘI DUNG CHÍNH =====
+\setcounter{page}{1}
+
+% Chương 1 - Sinh viên 1
+\input{chapters/01_gioi_thieu}
+
+% Chương 2 - Sinh viên 2
+\input{chapters/02_co_so_ly_thuyet}
+
+% Chương 3 - Sinh viên 3
+\input{chapters/03_phuong_phap}
+
+% Chương 4 - Sinh viên 4
+\input{chapters/04_ket_qua}
+
+% Chương 5 - Cùng làm
+\input{chapters/05_ket_luan}
+
+% ===== TÀI LIỆU THAM KHẢO =====
+\begin{thebibliography}{99}
+\bibitem{ref1} 
+Tác giả 1.  
+\textit{Tên sách/bài báo}. 
+Nhà xuất bản, năm xuất bản.
+
+\bibitem{ref2}
+Tác giả 2. 
+\textit{Tên sách/bài báo}. 
+Nhà xuất bản, năm xuất bản. 
+\end{thebibliography}
+
+% ===== PHỤ LỤC =====
+\appendix
+\input{appendix/appendix_a}
+\input{appendix/appendix_b}
+
+\end{document}

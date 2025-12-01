@@ -1,0 +1,97 @@
+% =====================================================
+% PHỤ LỤC B: MÃ NGUỒN ĐẦY ĐỦ
+% =====================================================
+
+\chapter{Mã nguồn đầy đủ}
+
+\section{Module chính}
+
+% \begin{lstlisting}[language=Python, caption=main.py - Module chính của chương trình]
+% """
+% Module chinh cua chuong trinh
+% Author: Nhom sinh vien
+% Date: 2025-12-01
+% """
+
+% import numpy as np
+% import pandas as pd
+% from sklearn.model_selection import train_test_split
+
+% class MainProgram:
+%     def __init__(self):
+%         """Khoi tao chuong trinh"""
+%         self.data = None
+%         self.model = None
+    
+%     def load_data(self, file_path):
+%         """Doc du lieu tu file"""
+%         self.data = pd.read_csv(file_path)
+%         print(f"Da tai {len(self.data)} dong du lieu")
+%         return self.data
+    
+%     def preprocess(self):
+%         """Tien xu ly du lieu"""
+%         # Xoa du lieu thieu
+%         self.data = self.data.dropna()
+        
+%         # Chuan hoa
+%         for col in self.data.columns:
+%             if self.data[col].dtype in ['int64', 'float64']:
+%                 self.data[col] = (self.data[col] - self.data[col].mean()) / self.data[col].std()
+        
+%         return self.data
+    
+%     def train(self):
+%         """Huan luyen mo hinh"""
+%         X = self.data.drop('target', axis=1)
+%         y = self.data['target']
+        
+%         X_train, X_test, y_train, y_test = train_test_split(
+%             X, y, test_size=0.2, random_state=42
+%         )
+        
+%         # Training logic here
+%         print("Dang huan luyen mo hinh...")
+        
+%         return self.model
+    
+%     def evaluate(self):
+%         """Danh gia mo hinh"""
+%         # Evaluation logic here
+%         accuracy = 0.955
+%         print(f"Do chinh xac: {accuracy:.2%}")
+%         return accuracy
+
+% if __name__ == "__main__":
+%     program = MainProgram()
+%     program.load_data("data.csv")
+%     program.preprocess()
+%     program.train()
+%     program.evaluate()
+% \end{lstlisting}
+
+\section{Module tiện ích}
+
+% \begin{lstlisting}[language=Python, caption=utils.py - Các hàm tiện ích]
+% """
+% Module chua cac ham tien ich
+% """
+
+% def tinh_trung_binh(numbers):
+%     """Tinh trung binh cua danh sach so"""
+%     return sum(numbers) / len(numbers)
+
+% def lam_sach_du_lieu(data):
+%     """Lam sach du lieu"""
+%     # Remove duplicates
+%     data = data.drop_duplicates()
+    
+%     # Remove outliers
+%     Q1 = data.quantile(0.25)
+%     Q3 = data.quantile(0.75)
+%     IQR = Q3 - Q1
+    
+%     data = data[~((data < (Q1 - 1.5 * IQR)) | (data > (Q3 + 1.5 * IQR))).any(axis=1)]
+    
+%     return data
+% \end{lstlisting}
