@@ -3,7 +3,7 @@
   a4paper,
   top=2.5cm,
   bottom=2.5cm,
-  left=3cm,
+  left=2.5cm, % Sử dụng 3cm cho bản in hai mặt
   right=2cm
 }
 
@@ -41,7 +41,7 @@
 \titleformat{\chapter}
   {\normalfont\huge\bfseries}
   {Chương \thechapter}
-  {1em}
+  {0.75em}
   {}
 % Loại bỏ chương khi đánh số phần
 % Ví dụ: I.1.1 -> 1.1
@@ -52,6 +52,8 @@
 % ===== HEADER =====
 \pagestyle{fancy}
 \fancyhead{}
-\fancyhead[RE,LO]{\nouppercase{\leftmark}}
-\renewcommand{\headrulewidth}{0.4pt}
+\fancyhead[L]{\nouppercase{\leftmark}}
+% Sử dụng dòng dưới cho bản in hai mặt
+% \fancyhead[RE,LO]{\nouppercase{\leftmark}}
+\renewcommand{\headrulewidth}{0.2pt}
 \setlength{\headheight}{14.3pt}
