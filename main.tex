@@ -8,7 +8,13 @@
 \begin{document}
 
 % ===== TRANG BÌA =====
+\pagenumbering{roman}
 \input{config/titlepage}
+
+\setcounter{page}{1}
+
+% Lời cam đoan
+\input{chapters/00_cam_doan}
 
 % ===== MỤC LỤC =====
 \tableofcontents
@@ -23,7 +29,7 @@
 \newpage
 
 % ===== NỘI DUNG CHÍNH =====
-\setcounter{page}{1}
+\pagenumbering{arabic}
 
 % Chương 1
 \input{chapters/01_gioi_thieu}
